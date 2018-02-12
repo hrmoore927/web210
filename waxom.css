@@ -1,0 +1,387 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end CSS reset */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+.header {
+    background: url(../images/headerImage.png) no-repeat;
+    background-size: cover;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header .top {
+    vertical-align: text-bottom;
+}
+
+.header .three {
+    padding-top: 40px;
+}
+
+.header .three img {
+    width: 50px;
+}
+
+.header .three li {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.header .three li:last-of-type {
+    font-family: "Raleway", "Arial", sans-serif; /* ask about google fonts */
+    font-weight: 400;
+    font-size: 34px;
+    color: #fff;
+    padding-left: 5px;
+}
+
+.seven {
+    text-align: right;
+    margin-left: .7em;
+    margin-right: -25px;
+    padding-top: 55px;
+}
+
+.header .seven li {
+    text-align: right;
+    padding-left: .7em;
+}
+
+.header .seven li:last-of-type {
+    padding-right: 0;
+}
+
+.header .seven a {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .seven a:nth-of-type(2) {
+    color: #c7b299; /* why is this not changing the color */
+}
+
+.two {
+    text-align: left;
+    padding-top: 52px;
+}
+
+.header .two img {
+    padding-left: 10px;
+}
+
+.banner::before {
+    content: url(../images/leftArrow.png);
+    position: absolute;
+    left: 7%;
+    top: 45%;
+    margin-left: -150px;
+}
+
+.banner::after {
+    content: url(../images/rightArrow.png);
+    position: absolute;
+    right: 7%;
+    top: 45%;
+    margin-right: -150px;
+}
+
+.banner {
+    margin: 0 auto;
+    padding: 8em;
+    color: #fff;
+    text-align: center;
+}
+
+.banner h2 {
+    font-family: "Raleway", "Arial", sans-serif;
+    font-size: 36px;
+    padding-bottom: 14px;
+}
+
+.banner h3 {
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 52px;
+    padding-bottom: 21px;
+}
+
+.banner p {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    padding-bottom: 60px;
+}
+
+.banner input {
+    background-color: #998675;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 150px;
+}
+
+.banner ul {
+    padding-bottom: 50px;
+}
+
+.banner li {
+    padding-left: 5px;
+    vertical-align: middle;    
+}
+
+.services .twelve ul, .content {
+    text-align: center;
+}
+
+.services .twelve ul {
+    padding-top: 75px;
+    padding-bottom: 150px;
+}
+
+.services .twelve img {
+    width: 80%;
+}
+
+.content {
+    background-color: #fbfaf8;
+}
+
+.content h4 {
+    color: #555555;
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 24px;
+}
+
+.content p {
+    color: #8c8c8c;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    padding-bottom: 30px;
+    width: 60%;
+    padding-left: 20%;
+}
+
+.content .browser li {
+    display: inline-block;
+    position: absolute;
+}
+
+.content .browser li:first-of-type {
+    z-index: -100;
+    left: 0;
+    padding-top: 82px;
+}
+
+.content .browser li:nth-of-type(2) {
+    z-index: 100;
+    left: 17%;
+}
+
+.content .browser li:last-of-type {
+    z-index: -100;
+    right: 0;
+    padding-top: 82px;
+}
+
+.divider {
+    margin-top: 482px;
+    background: linear-gradient(to right, #211b19, #4e3427);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.divider .ten {
+    padding-top: 15px;
+}
+
+.divider .two {
+    padding-top: 20px;
+}
+
+.divider h5 {
+    color: #998675;
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.divider span {
+    color: #b9b7b6;
+}
+
+.divider p {
+    color: #4f4642;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.divider input {
+    background-color: #998675;
+    border: none;
+    color: #fff;
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: #191919;
+    padding-top: 50px;
+}
+
+.footer .readMore li {
+    vertical-align: middle;
+    padding-bottom: 30px;
+}
+
+.footer .logo li:last-of-type {
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    color: #fff;
+}
+
+.footer p {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #555;
+    line-height: 24px;
+}
+
+.footer .readMore li:first-of-type {
+    color: #c1c1c1;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    padding-top: 25px;
+}
+
+.footer .readMore li img:last-of-type { /* fix arrow */
+    padding-top: 5px;
+}
+
+.footer h6 {
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    padding-bottom: 40px;
+    padding-top: 35px;
+}
+
+.footer .lightText {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #363636;
+}
+
+.footer .whiteDate {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #fff;
+}
+
+.footer .text {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #c7b299;
+}
+
+.footer .recent p:nth-of-type(even) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #595f6f;
+}
+
+.footer .recent p:last-of-type {
+    border-bottom: none;
+}
+
+.footer .recent p:nth-of-type(odd) {
+    padding-top: 15px;
+}
+
+.footer .twitter .link {
+    color: #8f8f8f; /* why is this color not changing */
+}
+
+.footer .dribbble .thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .dribbble img {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+}

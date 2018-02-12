@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CosmoFarmer</title>
+<style>
+    /* reset browser styles */
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1.2;
+    }
+    ol { 
+        padding-left: 1.4em;
+        list-style: decimal;
+    }
+    ul {
+        padding-left: 1.4em;
+        list-style: square;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    } 
+    /* end reset browser styles */
+
+    /* BASIC */
+    body {
+        font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+
+    .mainNav { /* this takes away the margin, padding, and bullets from the mainNav ul */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .mainNav li { /* this floats the li tags to the left lining them up side by side */
+        float: left;
+        width: 12em;
+    }
+    
+    .mainNav a { /* this targets the links in the mainNav ul chaging the color to black, sets the font size, capitalizes every letter, and removes the underline replacing it with a dashed border on all sides */
+        color: #000;
+        font-size: 11px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px dashed #999;
+        border-right: none; /* this removes the border from the right of the links so they don't double up and make the borders look thicker */
+        padding: 7px 5px 7px 30px; /* this increases the padding on all sides allowing for the text to not overlap the green arrow icon */
+        display: block; /* this changes the elements from inline to block allowing them to take on the padding properties */
+        background-color: #e7e7e7;
+        background-image: url(images/nav.png);
+        background-repeat: no-repeat;
+        background-position: 0 2px;
+    }
+    
+    .mainNav li:last-of-type { /* this adds a dashed border to only the right of the last li tag */
+        border-right: 1px dashed #999;
+    }
+    
+    .mainNav a:hover { /* this applies to the links when the user mouses over bolding the text, changing the background color, and adjusting the position of the css sprite so that a different icon appears */
+        font-weight: bold;
+        background-color: #b2f511;
+        background-position: 3px 50%;
+    }
+    
+    .home .homeLink,
+    .feature .featureLink,
+    .expert .expertLink,
+    .quiz .quizLink,
+    .project .projectLink,
+    .horoscope .horoscopeLink { /* this applies to the homeLink within the home class (in addition, it will apply to the featureLink within the feature class, the expertLink within the expert class, and so on depending on what you have assigned in the html) changing the background color, moving the sprite position to display a different icon, and bolding the text */
+        background-color: #ffffff;
+        background-position: 3px 100%;
+        padding-right: 15px;
+        padding-left: 30px;
+        font-weight: bold;
+    }
+
+</style>
+</head>
+<body class="feature"> 
+  <ul class="mainNav">
+    <li><a href="/index.html" class="homeLink">Home</a></li>
+    <li><a href="/features/" class="featureLink">Features</a></li>
+    <li><a href="/experts/" class="expertLink">Experts</a></li>
+    <li><a href="/quiz/" class="quizLink">Quiz</a></li>
+    <li><a href="/projects/" class="projectLink">Projects</a></li>
+    <li><a href="/horoscopes/" class="horoscopeLink">Horoscopes</a></li>
+  </ul>
+</body>
+</html>

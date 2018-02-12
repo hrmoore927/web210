@@ -1,0 +1,105 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.2;
+}
+ol { 
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+} 
+/* end reset browser styles */
+
+html {
+    background-color: rgb(253,248,171); /* this applies a light yellow background to the entire page */
+}
+
+body {
+    background-color: rgb(255,255,255); /* this color will override the html background color and only apply the body */
+    border: 3px solid rgb(75,75,75); /* border shorhand including size, style, and color */
+    box-shadow: 0 0 15px 5px rgba(44,82,100,.75); /* this applies a dark blue glow directly behind the body, no offsets */
+    max-width: 760px; /* this makes sure that the body's width never goes above 760px, no matter how big the user stretches the window */
+    margin-top: 20px; /* this applies to only a single side margin of the body */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px; /* this padding will apply to all 4 sides of the body */
+}
+
+h1 {
+    font-size: 2.75em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 1px;
+    color: rgb(133,161,16);
+    text-transform: uppercase;
+    background-color: rgb(226,235,180); /* this adds a light green background the only the h1, overriding the white from the body */
+    padding: 5px 15px 2px 15px; /* padding is added to give the text a little room within it's background color */
+    margin: 0 -15px 20px -15px; /* margins are adjusted with the shorthand technique to make the background color run completely from one edge of the body's box to the other without any whitespace showing */
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: rgb(249,107,24);
+    border-top: 2px dotted rgb(141,165,22); /* dashed borders are added to the top and bottom of the h2 tags to give it a visual separation from the next section */
+    border-bottom: 2px dotted rgb(141,165,22);
+    padding-top: 5px; /* padding is added to give the text space away from the borders */
+    padding-bottom: 5px;
+    margin: 15px 0 5px 0;
+    overflow: hidden; /* this keeps the borders from running behind the floated sidebar */
+}
+
+.sidebar { /* this floats the .sidebar div to the right with a width of 30% the width of the body */
+    width: 30%;
+    float: right;
+    margin: 10px;
+    background-color: rgb(150,135,199);
+    padding: 10px 20px;
+    border: 1px dotted rgb(252,101,18);
+    border-radius: 10px;
+    border-top: 20px solid rgb(252,101,18);
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5); /* adding a box shadow really gives the look that the sidebar is actually floating on the page */
+}
+
+.sidebar h2 { /* this decendent selector takes away the border, top margin, and padding that was applied earlier to all h2s */
+    border: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Not sure if you wanted us to do the "Going Further" part at the end of the tutorial, but here it is */
+
+p { /* this gives all of the paragraphs a different text color and adds a little bit of margin space to the left and right sides */
+    color: rgb(0, 0, 139);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.copyright { /* This applies to the copyright class on the last p tag giving it a top border, decreasing the font size, changing the text color, and making the text all uppercase. This gives a clear visual difference between the copyright and the rest of the p tags. */
+    border-top: 2px solid #000;
+    font-size: .75em;
+    color: #a31;
+    text-transform: uppercase;
+}
+
+

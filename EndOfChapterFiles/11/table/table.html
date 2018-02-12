@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS: The Missing Manual</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<h1>Welcome to the Lorem Ipsum Store</h1>
+	
+	<table class="inventory"> <!-- the entire table is targeted in the external stylesheet to stretch its width to 100% of its container -->
+	
+		<caption> <!-- the caption is styled to align the text right and decrease the font size -->
+			Table 1: Current Inventory
+		</caption>
+		
+		<colgroup>
+			<col id="product">
+			<col id="price"> <!-- the price and rating columns' size is decreased in the external stylesheet -->
+			<col id="rating">
+		</colgroup>
+		
+		<tr> 
+			<th scope="col">Product</th> <!-- the table headers are styled to align the text to the left, add a border, increase the font size, capitalize each letter, include a gradient background, and change the text color to white -->
+			<th scope="col">Price</th>
+			<th scope="col">Rating</th>
+		</tr>
+		
+		<tr> <!-- the table rows are styled to give alternating white and orange background colors -->
+			<td> Vitae Quam Lorem</td> <!-- the table data is styled to add a border, padding, and increase the font size -->
+			<td>$19.95</td>
+			<td class="rating"><img src="images/star.png" width="16" height="16" alt="star"><img src="images/star.png" width="16" height="16" alt="star"><img src="images/star.png" width="16" height="16" alt="star"><img src="images/star.png" width="16" height="16" alt="star"><img src="images/star.png" width="16" height="16" alt="star"></td>
+		</tr>
+		
+		<tr>
+			<td> In Tempus Velit</td>
+			<td>$14.55</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Lorem Ipsum Dolor Sat</td>
+			<td>Priceless</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Quis Felis Fringilla</td>
+			<td>$29.95</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Nunc Sem Pharetra</td>
+			<td>$75.99</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Vel Faucibus Elit</td>
+			<td>$82.00</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+		
+		<tr>
+			<td> Non Adipiscing Vitae</td>
+			<td>$1.95</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Aenean Orci Ante</td>
+			<td>$17.95</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Venenatis Non Adipiscing</td>
+			<td>$44.00</td>
+			<td><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span><span class="rating"><img src="images/star.png" width="16" height="16" alt="star"></span></td>
+		</tr>
+	</table>
+</body>
+</html>

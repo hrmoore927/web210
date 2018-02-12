@@ -1,0 +1,70 @@
+.nav, .boxes, .footer, .footer form { /* this turns these selected containers into flex boxes and displays the items as a row that can wrap */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.nav { /* this targets the nav class to change the justify of the flex items to stretch them the width of the container and put space in between them */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.nav a { /* this make each link in the nav class span 23% of the container */
+    width: 23%;
+}
+
+.boxes div { /* this targets the boxes class and makes the content items take up an equal area of the container */
+    -webkit-flex: 1 1 250px;
+    flex: 1 1 250px;
+    margin: 10px; 
+    border-radius: 5px;
+    padding: 10px 10px 0 10px; /* padding gives a little space between the flex items since they were touching with only the flex property */
+    background-color: rgba(0,0,0,.1);
+    display: -webkit-flex; /* this defines the divs inside the boxes class as flex containers */
+    display: flex;
+    -webkit-flex-flow: column; /* this sets up the direction of the divs to column */
+    flex-flow: column;
+}
+
+.boxes .more { /* this targets the "more info" buttons in the boxes class items and adjusts their top margins to push them to the bottom of their containers */
+    margin-top: auto;
+}
+
+.footer .copyright { /* this sets the copyright to be twice as wide as the signup form */
+    -webkit-flex: 2 1 500px;
+    flex: 2 1 500px;
+    margin-right: 30px;
+}
+
+.footer .signup {
+    -webkit-flex: 1 1 250px;
+    flex: 1 1 250px;
+}
+
+.signup label {
+    width: 100%;
+}
+
+.signup input[type="email"] { /* the next two attribute selectors put the email and submit next to each other and rounds the corners */
+    border-radius: 4px 0 0 4px;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.signup input[type="submit"] {
+    border-radius: 0 4px 4px 0;
+    padding: 0 10px;
+}
+
+@media (max-width: 500px) { /* the following will only apply when the browser window is 500px wide or less */
+    .nav { /* this changes the direction of the nav class flex items to column */
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+    
+    .nav a { /* this stretches the nav links to 100% of their container and adds a bit of margin to their bottoms */
+        width: 100%;
+        margin-bottom: 2px;
+    }
+}

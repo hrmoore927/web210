@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Typography</title>
+    <link href="main.css" rel="stylesheet">
+<style>
+    a { /* this targets all a tags to change the color, remove the underline, bold the text, and add an orange bottom border */
+        color: #207ebf;
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 2px solid #f60;
+    }
+    
+    a:visited { /* this color applies to links after they have been visited */
+        color: #6e97bf;
+    }
+    
+    a:hover { /* this when apply to links when the user mouses over them changing the text color, background color, and bottom border color */
+        color: #fff;
+        background-color: #6e97bf;
+        border-bottom-color: #6e97bf;
+    }
+    
+    a[href^="mailto:"] { /* this applies to only the email link changing the color, removing the border, inserting a small image of a letter and adding space between the image and the text */
+        color: #666666;
+        border: none;
+        background: url(images/email.gif) no-repeat left center;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+    
+    .resources a { /* this targets the a tags in the resources class to remove the bottom border */
+        border-bottom: none;
+        padding-right: 22px;
+    }
+    
+    .resources a[href*='://'] { /* this applies to all of the links within the resources class that contain :// adding a small globe image to the right of the link indicating to the user that this is an external link */
+        background: url(images/globe.png) no-repeat right top;
+    }
+    
+    .resources a[href$='.pdf'] { /* this targets any link within the resources class that contains a link ending in .pdf and displays a small pdf icon to the right */
+        background: url(images/acrobat.png) no-repeat right top;
+    }
+    
+    .resources a[href$='.zip'] { /* this targets any link within the resources class that contains a link ending in .zip and displays a small zip icon to the right */
+        background: url(images/zip.png) no-repeat right top;
+    }
+    
+    .resources a[href$='.doc'] { /* this targets any link within the resources class that contains a link ending in .doc and displays a small MS Word icon to the right */
+        background: url(images/word.png) no-repeat right top;
+    }
+    
+    .resources a:hover { /* this changes the text color and background color to the links in the resources class when a user mouses over them */
+        color: #000;
+        background-color: rgba(255,255,255,.8);
+    }
+
+</style>	
+</head>
+
+<body>
+<div class="main">
+    <h1><strong>CSS</strong> The Missing Manual</h1>
+    
+    <h2>Exploring Typographic Possibilities</h2>
+    
+    <p class="byline">november 30 <strong>Rod Dibble</strong></p>
+    
+    <div class="resources"> <!-- this resources class is targeted in the internal css -->
+        <h3> Resources</h3>
+        <ul>
+            <li><a href="report.pdf">Annual Report</a></li>
+            <li><a href="template.doc">Corporate Word Template</a></li>
+            <li><a href="logos.zip">Corporate Graphics</a></li>
+            <li><a href="https://www.yahoo.com/">Parent Corporate Site</a></li>
+            <li><a href="https://www.google.com/">More Links</a></li>
+        </ul>
+    </div>
+    
+    <h3>Esse quam nulla</h3>
+    
+    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <a href="test.html">Quis autem vel eum</a> iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi <a href="test2.html">ut aliquid ex ea commodi</a> consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> <!-- links within the paragraphs are targeted in the internal css and will take on different values than the resources class links-->
+    
+    <h3>Quis autem vel eum</h3>
+    
+    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illu <a href="test3.html">qui dolorem eum</a> fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    
+    <p class="legal">Copyright 2015 <a href="mailto:css@cosmofarmer.com">E-mail comments to css@cosmofarmer.com</a></p> <!-- the email link is targeted in the internal css and will display on the same line as the copyright -->
+</div>
+</body>
+</html>

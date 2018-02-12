@@ -1,0 +1,98 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,800); /* imported google font */
+
+body { margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; font-weight: 300; color: #777; font-size: 15px; background-color: #fff; }
+
+header { height: 90px; background: #000 url(images/banner.jpg) no-repeat center top; position: relative; }
+
+header h1 { width: 100%; text-align: center; color: #fff; text-transform: uppercase; position: absolute; bottom: -8px; left: 0px; margin: 0px; font-size: 3em; line-height: 48px; font-weight: 800; }
+
+article { max-width: 800px; padding: 10px 30px 20px 30px; width: 90%; margin: 0px auto; }
+
+blockquote { /* styles are applied to the text within the blockquote tags */
+    width: 45%;
+    float: right;
+    margin: 0 26px 100px 75px;
+    padding: 0;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-family: "Georgia", serif;
+    color: #0746bb;
+    position: relative;
+}
+
+blockquote::before {
+    content:'\201c'; /* this inserts a double quote before the blockquote */
+    top: 20px; /* top and left adjusts the placement of the double quotes by pixels */
+    left: -50px;
+}
+
+blockquote::after {
+    content:'\201d'; /* this inserts a double quote after the blockquote */
+    bottom: -42px;
+}
+
+blockquote::before, blockquote::after { /* this adjusts the size and position of the double quotes within the blockquote */
+    font-size: 5.2em;
+    position: absolute;
+}
+
+blockquote cite { /* this targets only the cite tags within the blockquote */
+    font-size: .6em;
+    font-style: normal; /* cite tag content is in italics by default so this changes it to normal text */
+    display: block; /* cite content will show up on its own line */
+    line-height: 16px;
+    color: #888;
+    position: absolute; /* this adjusts the position of the cite content to absolute so it is relative to the blockquote content */
+    top: 110%;
+    padding-left: 60px;
+}
+
+blockquote cite a { /* the link in the cite tag is targeted to have it inherit the color of the rest of the cite content */
+    color: inherit;
+}
+
+blockquote cite a:hover { /* the hover psuedo-element is used to change the text color when a user hovers over the link */
+    color: #000;
+}
+
+blockquote cite::after { /* this will add content after the cite tags */
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(images/photo.jpg) no-repeat 0 0; /* an image is added with no repeat */
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 550px) {
+
+	header { 
+        height: 75px; background-position: center center; 
+    }
+    
+	header h1 { 
+        font-size: 2em; line-height: 32px; bottom: -5px; 
+    }
+	
+    blockquote { /* the blockquote is targeted here for smaller screen sizes */
+        float: none; /* the float is removed */
+        font-size: 1.3em;
+        width: 70%;
+        margin: 40px auto 100px auto;
+    }
+    
+    blockquote::before {
+        top: 16px;
+        left: -40px;
+    }
+    
+    blockquote::after {
+        bottom: -35px;
+    }
+
+}

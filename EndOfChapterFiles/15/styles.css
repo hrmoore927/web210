@@ -1,0 +1,239 @@
+/* reset browser styles */
+* {
+  box-sizing: border-box; 
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* end reset browser styles */
+
+.clear:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.clear {
+	zoom: 1;	
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
+}
+
+
+header {
+	background-color:rgb(93,43,78); 
+	background-image: linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
+	padding-bottom: 30px;
+}
+
+header h1 {
+	font-size: 3em;	
+	color: white;
+	font-weight: bold;
+	padding-top: 30px;
+	clear: both;
+	padding-left: 10px;
+}
+
+nav {
+	background-color: rgb(25,25,25);
+	border: 1px solid rgba(255,255,255,.5);	
+	border-left: none;
+	border-right: none;
+}
+nav ul {
+	padding: 0;
+	margin: 0;	
+}
+nav li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+}
+nav a {
+	float: left;
+	font-size: .8em;	
+	color: white;
+	font-weight: normal;
+	text-decoration: none;
+	padding: 10px;
+	border-right: 1px dashed rgba(255,255,255,.75);
+	transition: all .5s;
+}
+nav li:last-of-type a {
+	border-right: none;	
+}
+nav a:hover {
+	background-color: rgb(93,43,78);
+}
+aside h2 {
+	font-size: 1.3em;
+	margin-top: 10px;	
+}
+aside h3 {
+	font-size: 1.1em;
+	margin-top: 15px;
+}
+aside p, aside li {
+	font-size: .75em;
+	margin-top: 10px;	
+}
+.main h2 {
+	font-size: 2em;
+	margin-top: 10px;	
+}
+.main h3 {
+	font-size: 1.5em;
+	margin-top: 20px;	
+}
+.main p {
+	margin-bottom: 15px;	
+}
+footer {
+	margin-top: 15px;
+	font-size: .8em;	
+	padding: 10px 10px 30px 10px;
+	background-color: black;
+	color: rgb(204,204,204);
+}
+footer a {
+	color: white;	
+}
+/* add tutorial styles below here */
+
+/* uncomment this style if you want the entire page -- including background colors --
+   constrained inside a 1200 pixel, centered box */
+/*.pageWrapper {
+	max-width: 1200px;
+	margin: 0 auto;	
+}*/
+
+.columnWrapper { /* this creates a two-column layout with the div containing the main and sidebar1 and the aside for sidebar2 by floating the columnWrapper left */
+    float: left;
+    width: 80%;
+}
+
+.sidebar1 { /* this changes the width of the sidebar1 to 25% of the container */
+  float: left;
+  width: 25%;
+  padding: 0 20px 0 10px;
+}
+.main { /* the float has been change to right placing the main class in the middle of the page at 75% width of its container */
+  float: right; 
+  width: 75%;
+  padding: 0 20px;
+  border-left: dashed 1px rgb(153,153,153);
+  border-right: dashed 1px rgb(153,153,153);
+}
+.sidebar2 {
+  float: right;
+  width: 20%; 
+  padding: 0 10px 0 20px;
+}
+footer {
+  clear: both;  
+}
+nav ul, header h1, footer p, .contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+img { /* this gives the img tags a max-width of 100% of its container no matter how the browser window is resized */
+    max-width: 100%;
+}
+
+img.half { /* this will apply to img tags with a class of half to bring their max-width down to 50% */
+    max-width: 50%;
+}
+
+img.left { /* this will apply to img tags with a class of left to float left and have the text wrap around it */
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+img.right { /* this will apply to img tags with a class of right to float right and have the text wrap around it */
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+@media (min-width: 481px) and (max-width: 768px) { /* this media query targets browsers with widths between 481px and 768px */
+    .sidebar2 { /* the float is removed from the sidebar2 class and the width is set to auto */
+        float: none;
+        width: auto;
+        clear: both; /* the clear property drops the sidebar2 below the columnWrapper div that is floated left */
+        border-top: 2px solid black;
+        padding-top: 10px;
+    }
+    
+    .columnWrapper { /* this changes the width of the columnWrapper div to fill its container removing the white space left behind from the sidebar2 clear */
+        width: auto;
+    }
+    
+    .main { /* the right border that visually separated the main class from the sidebar2 class is no longer needed */
+        border-right: none;
+    }
+}
+
+@media (max-width: 480px) { /* this media query applies to browsers with widths no larger than 480px */
+    .columnWrapper, .main, .sidebar1, .sidebar2 { /* the floats have been removed from the columnWrapper, main, sidebar1, and sidebar2 classes and the auto width makes them fill their containers completely */
+        float: none;
+        width: auto;
+    }
+    
+    .main { /* the border is no longer needed on the main class */
+        border: none;
+    }
+    
+    .sidebar1, .sidebar2 { /* a visual separation is applied to the sidebar1 and sidebar2 classes */
+        border-top: 2px solid black;
+        margin-top: 25px;
+        padding-top: 10px;
+    }
+    
+    header h1 { /* this decreases the h1 font size so it will fit on a single line */
+        font-size: 1.5em;
+    }
+    
+    nav { /* this centers the text of the nav tag */
+        text-align: center;
+    }
+    
+    nav li { /* this removes the float of the nav li tags and diplays them side by side */
+        float: none;
+        display: inline-block;
+    }
+    
+    nav a { /* this removes the float and the border from the nav a tags */
+        float: none;
+        display: inline-block;
+        border: none;
+    }
+}

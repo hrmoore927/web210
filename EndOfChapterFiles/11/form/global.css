@@ -1,0 +1,93 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+
+/* end reset browser styles */
+
+body {
+	width: 760px;
+	margin: 0 auto;	
+	background-color: rgb(0,51,102);
+	color: rgb(255,255,255);
+}
+
+h1 {
+	font-size: 2em;
+	font-family: "Tahoma", "Geneva", "sans-serif";
+	font-weight: normal;
+	border-bottom: dotted 2px rgba(255,255,255,.5);
+	padding-bottom: 4px;	
+	margin: 25px 0;
+}
+
+p {
+	margin-bottom: 25px;	
+}
+
+.subform { /* this targets the subform class increasing the font size, changing the text color to white, and changes the font family */
+    font-size: 1.2em;
+    color: white;
+    font-family: "Tahoma", "Geneva", "sans-serif";
+}
+
+.subform .label { /* this changes the display of all of the label class tags to inline-block, increasing their width and vertically aligning them to the top */
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    text-align: right; /* this aligns the text of the label class to the right so if is flush with the input fields */
+    margin-right: 10px;
+    font-weight: bold;
+    color: rgba(255,255,255,.5);
+}
+
+.subform input[type="submit"] { /* this targets the submit input box and increases the left margin so that it lines up with the text input boxes */
+    margin-left: 220px;
+    padding: 10px 25px; /* this adds space in the submit button box so that the text has breathing room */
+    font-size: 1em;
+    color: white;
+    background: rgb(0,102,153); /* this sets the background color for the submit button */
+    background: linear-gradient(to bottom, rgba(255,255,255,.1) 40%, rgba(255,255,255,.5)); /* this controls the gradient applied to the background of the submit button */
+    border-radius: 5px; /* this gives the submit button rounded corners */
+    box-shadow: 0 0 4px white; /* this applies a white glow to the submit button */
+}
+
+.subform select { /* this targets the select tag and increases the font size */
+    font-size: 1.2em; 
+}
+
+.subform input[type="text"], .subform textarea { /* this targets the text inputs and the textarea tag to round the corners, remove the borders, change the background and text color, increase the font size, apply and inset white shadow, increase the width, and add padding to all sides */
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255,255,255,.5);
+    color: rgba(255,255,255,1);
+    font-size: 1.2em;
+    box-shadow: inset 0 0 10px rgba(255,255,255,.75);
+    width: 500px;
+    padding: 5px;
+}
+
+.subform input[type="text"]:focus, .subform textarea:focus { /* this applies to the text inputs and the textarea only when they are tab over with the pseudo-selector "focus" to change the background to white and the text color to black */
+    background-color: white;
+    color: black;
+}
